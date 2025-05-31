@@ -137,10 +137,11 @@ const Home=() => {
 
     return(
         <>
+        <div className="h-screen overflow-y-auto">
         <Navbar userInfo={userInfo} onSearchNote={onSearchNote} handleClearSearch={handleClearSearch}/>
 
-        <div className="container mx-auto ">
-            {allNotes.length>0 ?<div className="grid grid-cols-3 gap-4 mt-8">
+        <div className="container px-1 ">
+            {allNotes.length>0 ?<div className="grid grid-cols-3 gap-4 mt-8 flex mb-4">
                 {allNotes.map((item, index) => (
                 <NoteCard 
                 key= {item._id }
@@ -172,7 +173,7 @@ const Home=() => {
             },
         }}
         contentLabel=""
-        className="w-[40%] max-h-3/4 bg-white rounded-md mx-auto mt-14 p-5 overflow-auto"
+        className="sm:w-[40%] max-h-3/4 bg-white rounded-md mx-auto mt-14 p-5 overflow-auto"
         
         >
         <AddEditNotes
@@ -193,6 +194,7 @@ const Home=() => {
         type= {showToastMsg.type}
         onClose= {handleCloseToast}
         />
+        </div>
         </>
     )
 }
