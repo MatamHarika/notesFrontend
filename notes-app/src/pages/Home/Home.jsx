@@ -9,7 +9,6 @@ import {Link, useNavigate } from "react-router-dom";
 import axiosInstance from "../../utils/axiosInstance";
 import Toast from "../../components/ToastMessage/Toast";
 import EmptyCard from "../../components/EmptyCard/EmptyCard";
-import imgurl from "/src/assets/notes-memo-icon-symbol-clipart-with-paperclip-isolated-on-white-background-vector.jpg";
 Modal.setAppElement('#root');
 const Home=() => {
 
@@ -154,7 +153,7 @@ const Home=() => {
                 onDelete= {() =>deleteNode(item) }
                 onPinNote= {() =>updateIsPinned(item) }
                 />))}
-            </div> : (<EmptyCard imgSrc={imgurl} message={isSearch ? 'Oops no records found':'start creating your first note! click `add` button to drop down your ideas thoughts and remainders '}/>) }
+            </div> : (<EmptyCard  imgSrc="/notes-memo-icon-symbol-clipart-with-paperclip-isolated-on-white-background-vector.jpg" message={isSearch ? 'Oops no records found':'start creating your first note! click `add` button to drop down your ideas thoughts and remainders '}/>) }
         </div>
         <button className="w-16 h-16 cursor-pointer flex items-center justify-center rounded-2xl bg-primary hover:bg-blue-600 absolute right-10 bottom-10" 
         onClick={() => {
